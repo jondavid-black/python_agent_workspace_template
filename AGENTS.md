@@ -87,6 +87,14 @@ For full workflow details: `bd prime`
 *   **Context:** Catch exceptions narrowly and provide context when re-raising.
 *   **Fail Fast:** Validate inputs early.
 
+### Git Conventions
+*   **Commit Messages:** Use [Conventional Commits](https://www.conventionalcommits.org/).
+    *   `feat: add user login`
+    *   `fix: resolve null pointer exception`
+    *   `docs: update readme`
+    *   `refactor: simplify auth logic`
+*   **Granularity:** Make small, atomic commits that do one thing well.
+
 ## Project Structure
 
 The project is modularized by functionality:
@@ -95,20 +103,20 @@ The project is modularized by functionality:
 *   `tests/`: Unit tests mirroring the `src` structure.
 *   `features/`: Gherkin feature files for BDD.
 
-## 4. Testing Guidelines
+## Testing Guidelines
 
 *   **TDD/BDD:** Adopt a Test-Driven or Behavior-Driven approach. Write the test or feature file *before* implementing the logic.
 *   **Coverage:** Maintain high test coverage (fail under 75% is configured).
 *   **Mocking:** Use `unittest.mock` or `pytest-mock` to isolate external dependencies (filesystem, network).
 *   **Fixtures:** Use `pytest` fixtures for setup/teardown and reusable test data.
 
-## 5. Documentation & Comments
+## Documentation & Comments
 
 *   **Docstrings:** Use Google-style docstrings for public modules, classes, and methods.
 *   **Why vs. What:** Comments should explain *why* a complex piece of logic exists, not *what* the code is doing (the code should be self-documenting).
 *   **No Chat:** Do not add conversational comments or signature blocks.
 
-## 6. Workflow Checklist for Agents
+## Workflow Checklist for Agents
 
 1.  **Analyze:** Read related files and `AGENTS.md` before starting.
 2.  **Safety:** If modifying filesystem/running shell commands, explain the impact first.
@@ -122,7 +130,7 @@ The project is modularized by functionality:
     *   Run docs: `uv run mkdocs build`
 6.  **Refine:** Fix any issues found during verification.
 
-## 7. Copilot/AI Specifics
+## Copilot/AI Specifics
 
 *   **Context:** Consider the surrounding code and project structure.
 *   **Dependencies:** Do not introduce new dependencies without explicit instruction. Use existing libraries.

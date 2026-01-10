@@ -11,7 +11,7 @@ jobs:
   repo-sync:
     runs-on: ubuntu-latest
     # Do not run on the template repo itself
-    if: github.repository != 'YOUR_GITHUB_USERNAME/YOUR_TEMPLATE_REPO_NAME'
+    if: github.repository != 'Yjondavid-black/python_agent_workspace_template'
 
     steps:
       - name: Checkout Child Repo
@@ -21,7 +21,7 @@ jobs:
         uses: AndreasAugustin/actions-template-sync@v2
         with:
           # The source template repository
-          source_repo_path: YOUR_GITHUB_USERNAME/YOUR_TEMPLATE_REPO_NAME
+          source_repo_path: jondavid-black/python_agent_workspace_template
           # Branch to pull from
           source_repo_branch: main
           # This will create a new branch and a PR for you to review

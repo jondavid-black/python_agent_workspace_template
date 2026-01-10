@@ -9,7 +9,7 @@ If these aren't present inform the user and provide instructions for them to pro
 
 ### Core Environment Tools
 | Tool | Check Command | Initialization Command | Description |
-|--------|---------|-------------|
+|--------|---------|-------------|----------------|
 | **UV** | `uv --version` | `uv init` | A modern python package manager. |
 | **Beads** | `bd --version` | `bd init` | An AI native issue tracker. |
 | **OpenCode** | `opencode --version` | `/init` (within the OpenCode TUI) | An open source AI Agent. |
